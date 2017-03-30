@@ -25,11 +25,11 @@ class BankAccount {
 
   cover_digits () {
     //
-    var newAccount = this._acct_number.split('-');
-    for (var i=0 ; i < newAccount.length ; i ++){
-      newAccount[i]= newAccount[i].replace(/[0-9]/g,'*');
-    }
-    console.log(this._customer_name+ ' : ' + this._type+ ' # '+ newAccount.join('-'));
+    var newAccount = '';
+
+      newAccount= this._acct_number.replace(/((\d{3})-(\d{3})-(\d{3}))/gi, '***-***-$3');
+
+    console.log(this._customer_name+ ' : ' + this._type+ ' # '+ newAccount);
   }
 }
 
