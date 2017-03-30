@@ -39,6 +39,7 @@ class BankAccount {
 
   cover_digits () {
     console.log(`${my_acct.name}: ${my_acct.tipe}# ***-***-` + my_acct.account_number.slice(8));
+    console.log(`${my_acct.name}: ${my_acct.tipe}# ${my_acct.account_number.replace(/(\d{3})-(\d{3})-(\d{3})/gi,'***-***-$3')}`);
   }
 }
 
