@@ -18,7 +18,7 @@ class BankAccount {
   cover_digits () {
     //
   }
-}
+} 
 
 let my_acct = new BankAccount('Hacktivate', 'Checking', '333-555-888')
 
