@@ -6,13 +6,27 @@ class BankAccount {
   constructor (customer_name, type, acct_number) {
     this._customer_name = customer_name;
     this._type = type;
-    this._acct_number = acct_number
+    this._acct_number = acct_number;
   }
-
+  get customer_name () {
+    return this._customer_name
+  }
+  get type () {
+    return this._type
+  }
   get account_number () {
     return this._acct_number
   }
 
+  set customer_name (value){
+    this._customer_name = value
+  }
+  set type (value){
+    this._type = value
+  }
+  set account_number (value){
+    this._acct_number = value
+  }
   to_string () {
     console.log(`${this._customer_name}: ${this._type}# ${this._acct_number}`)
   }
