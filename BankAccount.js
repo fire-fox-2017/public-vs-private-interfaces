@@ -7,6 +7,7 @@ class BankAccount {
     this._customer_name = customer_name;
     this._type = type;
     this._acct_number = acct_number;
+
   }
 
   set name(newName){
@@ -34,12 +35,12 @@ class BankAccount {
   }
 
   to_string () {
-    console.log(`${my_acct.name}: ${my_acct.tipe}# ${my_acct.account_number}`);
+    console.log(`${this._customer_name}: ${this._type}# ${this._acct_number}`);
   }
 
   cover_digits () {
-    console.log(`${my_acct.name}: ${my_acct.tipe}# ***-***-` + my_acct.account_number.slice(8));
-    console.log(`${my_acct.name}: ${my_acct.tipe}# ${my_acct.account_number.replace(/(\d{3})-(\d{3})-(\d{3})/gi,'***-***-$3')}`);
+    console.log(`${this._customer_name}: ${this._type}# ***-***-` + this._acct_number.slice(8));
+    console.log(`${this._customer_name}: ${this._type}# ${this._acct_number.replace(/(\d{3})-(\d{3})-(\d{3})/gi,'***-***-$3')}`);
   }
 }
 
