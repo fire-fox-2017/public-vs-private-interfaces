@@ -9,7 +9,7 @@ class BankAccount {
     this._acct_number = acct_number;
   }
 
-  get account_number () {
+  get acct_number () {
     return this._acct_number;
   }
 
@@ -32,7 +32,7 @@ class BankAccount {
 let my_acct = new BankAccount('Hacktivate', 'Checking', '333-555-888')
 
 console.log(my_acct)
-console.log(my_acct.account_number)
+console.log(my_acct.acct_number)
 
 // release 0
 my_acct.to_string() // "Hacktivate: Checking# 333-555-888"
