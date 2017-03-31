@@ -22,8 +22,7 @@ class BankAccount {
 
   cover_digits () {
     //
-    let temp=this._acct_number;
-    temp="xxx-xxx-"+temp.slice(8,temp.length);
+    let temp=this._acct_number.replace(/\d{3}-\d{3}/g, '***-***');;
     return `${this._customer_name}: ${this._type} # ${temp}`;
   }
 }
