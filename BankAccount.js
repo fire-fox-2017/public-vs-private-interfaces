@@ -17,7 +17,7 @@ class BankAccount {
     return this._type;
   }
 
-  get account_number () {
+  get acct_number () {
     return this._acct_number;
   }
 
@@ -41,17 +41,17 @@ class BankAccount {
     let pattern = /(\d{3})-(\d{3})-(\d{3})/;
     let hidden = this._acct_number.replace(pattern, `***-***-$3`);
 
-    return console.log(hidden);
+    return hidden;
   }
 }
 
 let my_acct = new BankAccount('Hacktivate', 'Checking', '333-555-888')
 
 console.log(my_acct)
-console.log(my_acct.account_number)
+console.log(my_acct.acct_number)
 
 // release 0
 my_acct.to_string() // "Hacktivate: Checking# 333-555-888"
 //
 // // release 1
-my_acct.cover_digits() // "Hacktivate: Checking# ***-***-888"
+console.log(my_acct.cover_digits()); // "Hacktivate: Checking# ***-***-888"
