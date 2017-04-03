@@ -38,11 +38,8 @@ class BankAccount {
   }
 
   cover_digits () {
-    let temp = this._account_number.split("-");
-    for (let i = 0; i < temp.length - 1; i++) {
-      temp[i] = temp[i].replace(/[0-9]/g, "*");
-    }
-    console.log(`${this._customer_name}: ${this._type}# ${temp.join("-")}`);
+    let covered = this.account_number.replace(/(\d{3})-(\d{3})-(\d{3})/g, `***-***-$3`);
+    console.log(`${this._customer_name}: ${this._type}# ${covered}`);
   }
 }
 
